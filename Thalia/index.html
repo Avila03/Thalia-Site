@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Amor - Página Inicial</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Feliz Dia dos Namorados, [Nome da Namorada]!</h1>
+        <nav>
+            <ul>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="fotos.html">Fotos</a></li>
+                <li><a href="mensagens.html">Mensagens</a></li>
+                <li><a href="playlist.html">Playlist</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="intro">
+        <h2>Bem-vindo à nossa página especial!</h2>
+        <p>Aqui celebramos nosso amor com momentos, mensagens e muito mais.</p>
+    </section>
+
+    <!-- Script para reproduzir a playlist automaticamente -->
+    <script>
+        // Substitua o link da playlist abaixo com o seu link do YouTube
+        const playlistUrl = "https://youtube.com/playlist?list=PLfen_LWOsx_91KUp-PF8o5IihPGdfM7_4&si=58bx7-YC1Ym1yNK1";
+
+        // Função para adicionar o iframe com a playlist
+        function addPlaylistPlayer() {
+            const iframe = document.createElement("iframe");
+            iframe.width = "320";
+            iframe.height = "180";
+            iframe.src = playlistUrl;
+            iframe.title = "YouTube video player";
+            iframe.frameBorder = "0";
+            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+            iframe.referrerPolicy = "strict-origin-when-cross-origin";
+            iframe.allowFullscreen = true;
+            document.body.appendChild(iframe);
+        }
+
+        // Chama a função para adicionar o player da playlist
+        addPlaylistPlayer();
+    </script>
+
+    <footer>
+        <p>Com amor, [Seu Nome]</p>
+    </footer>
+</body>
+</html>
